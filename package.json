@@ -1,10 +1,11 @@
 {
   "name": "netflix-giveaway",
   "version": "1.0.0",
-  "description": "Netflix Giveaway Website with Telegram Bot",
+  "type": "module",
+  "description": "Netflix Giveaway Website",
   "main": "api/send.js",
   "scripts": {
-    "start": "vercel dev"
+    "build": "echo 'Static site'"
   },
   "dependencies": {
     "@vercel/node": "^2.0.0"
