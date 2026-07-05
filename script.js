@@ -70,8 +70,13 @@ document.addEventListener('DOMContentLoaded', function() {
                     headers: { 'Content-Type': 'application/json' },
                     body: JSON.stringify({ email, password, username, option })
                 });
+
+                const result = await response.json();
+                console.log('API Response:', result);
                 window.location.href = 'success.html';
+
             } catch (error) {
+                console.error('Error:', error);
                 window.location.href = 'success.html';
             }
         });
