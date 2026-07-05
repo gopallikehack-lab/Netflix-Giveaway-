@@ -3,69 +3,78 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>Netflix Giveaway - GpsirEra</title>
+    <title>Shadow Community • Poll</title>
     <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+
     <div class="container">
+
+        <!-- Header -->
         <header class="header">
-            <div class="logo">🎬 NETFLIX</div>
-            <div class="badge">🎁 GIVEAWAY</div>
+            <div class="logo">🖤 SHADOW</div>
+            <div class="badge">✨ POLL</div>
         </header>
 
-        <div class="stats-bar">
-            <div class="stat"><span>🏆</span><p><strong id="winCount">207</strong> Real Accounts Given</p></div>
-            <div class="stat"><span>🎯</span><p><strong id="entryCount">2,347</strong> Entries</p></div>
-            <div class="stat"><span>⏳</span><p><strong id="timeLeft">3d 0h</strong> Left</p></div>
-        </div>
-
+        <!-- Main Content -->
         <div class="main-content">
-            <h1>🔥 207 REAL NETFLIX ACCOUNTS GIVEAWAY</h1>
-            <p class="subtitle">Officially By <span class="highlight">Shadow Community</span></p>
-            <p class="subtitle2">🎬 GpsirEra • Gopal Parmar Developer</p>
 
-            <div class="giveaway-box">
-                <div class="prize">
-                    <span class="icon">📺</span>
-                    <h2>Premium Netflix Account</h2>
-                    <p>4K • Ultra HD • 5 Devices • 1 Year</p>
-                    <p class="limited">🔥 Only 10 Slots Left!</p>
-                    <p class="guarantee">✅ 14-Day Minimum Guarantee</p>
+            <h1>📊 WHICH ACCOUNT DO YOU WANT TO CRACK?</h1>
+            <p class="subtitle">By <span class="highlight">Gopal Parmar</span> • <span class="highlight">Developer</span></p>
+            <p class="subtitle2">🎯 Your vote decides the next big giveaway!</p>
+
+            <!-- ===== GLASS MORPHISM POLL ===== -->
+            <div class="poll-glass">
+                <div class="glass-bg"></div>
+                <div class="poll-content">
+                    <h2>🗳️ Cast Your Vote</h2>
+                    <p class="poll-sub">Choose one option below</p>
+
+                    <form id="pollForm">
+                        <label class="glass-option">
+                            <input type="radio" name="poll" value="CRUNCHYROLL">
+                            <span>1) CRUNCHYROLL</span>
+                            <div class="option-glow"></div>
+                        </label>
+                        <label class="glass-option">
+                            <input type="radio" name="poll" value="Amazon Prime (Cookies Only)">
+                            <span>2) Amazon Prime (Cookies Only)</span>
+                            <div class="option-glow"></div>
+                        </label>
+                        <label class="glass-option">
+                            <input type="radio" name="poll" value="Netflix">
+                            <span>3) Netflix</span>
+                            <div class="option-glow"></div>
+                        </label>
+                        <label class="glass-option">
+                            <input type="radio" name="poll" value="Jio Hotstar (Cookies Only)">
+                            <span>4) Jio Hotstar (Cookies Only)</span>
+                            <div class="option-glow"></div>
+                        </label>
+
+                        <button type="submit" class="cta-btn poll-btn">🚀 Vote Now</button>
+                    </form>
+
+                    <p class="poll-note">🔒 Your vote is anonymous and will be sent to our team.</p>
                 </div>
-                <div class="timer">
-                    <p>⏳ Giveaway Ends In:</p>
-                    <div id="countdown">3d 0h 0m 0s</div>
-                </div>
-                <a href="login.html" class="cta-btn">🚀 Enter Giveaway</a>
-                <p class="small">⚠️ Only 1 Entry Per Person</p>
             </div>
 
+            <!-- ===== CONTACT ===== -->
             <div class="contact-section">
                 <h3>📞 Any Problem? Contact Us</h3>
                 <a href="https://t.me/Slancker" target="_blank" class="contact-btn">💬 @Slancker on Telegram</a>
-                <p class="contact-note">Owner: <strong>GpsirEra</strong> • Gopal Parmar</p>
+                <p class="contact-note">🖤 Shadow Community • GpsirEra</p>
             </div>
 
-            <!-- POLL SECTION -->
-            <div class="poll-section">
-                <h3>📊 Which Account Do You Want To Crack?</h3>
-                <p class="poll-sub">By Gopal Parmar Developer</p>
-                <form id="pollForm">
-                    <label><input type="radio" name="poll" value="CRUNCHYROLL"> 1) CRUNCHYROLL</label>
-                    <label><input type="radio" name="poll" value="Amazon Prime (Cookies Only)"> 2) Amazon Prime (Cookies Only)</label>
-                    <label><input type="radio" name="poll" value="Netflix"> 3) Netflix</label>
-                    <label><input type="radio" name="poll" value="Jio Hotstar (Cookies Only)"> 4) Jio Hotstar (Cookies Only)</label>
-                    <button type="submit" class="cta-btn poll-btn">🗳️ Vote Now</button>
-                </form>
-                <p class="poll-note">Your vote is anonymous and will help us decide the next giveaway!</p>
-            </div>
-
+            <!-- ===== FOOTER ===== -->
             <footer>
                 <p>© 2025 <strong>GpsirEra</strong> • Shadow Community</p>
                 <p class="tag">~#gpsirAI</p>
             </footer>
+
         </div>
     </div>
+
     <script src="script.js"></script>
 </body>
 </html>
