@@ -4,9 +4,6 @@
   "type": "module",
   "description": "Netflix Giveaway Website",
   "main": "api/send.js",
-  "scripts": {
-    "build": "echo 'Static site'"
-  },
   "dependencies": {
     "@vercel/node": "^2.0.0"
   }
